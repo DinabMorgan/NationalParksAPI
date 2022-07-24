@@ -1,0 +1,23 @@
+img {
+max-height: 200px;
+}
+* {
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer {
+    padding-top: 50px;
+}
+.NationalParks {
+    padding-top: 15px;
+}
+#search {
+    background-color: yellowgreen;
+}
+#VSearch {
+    background-color: #d0f0c0;
+}
+#LessonSearch {
+    background-color: #00ff7f;
+}
