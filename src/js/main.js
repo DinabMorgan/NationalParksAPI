@@ -2,8 +2,6 @@
 //const url2 = "https://jonahtaylor-national-park-service-v1.p.rapidapi.com/visitorcenters"
 //const url3 = "https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks"
 
-
-
 const settings = {
 	method: 'GET',
 	headers: {
@@ -80,8 +78,6 @@ fetch(url1, settings)
 .then((response ) => { return response.json();}) 	
 .then((response) => {
 
-    
-
     let LessonGrade= response.data[0];
     console.log(response);
     LessonPlan.href = LessonGrade.url;
@@ -115,7 +111,7 @@ function SearchV() {
     let VInput = document.getElementById("VisitorText")
     let userVInput = VInput.value.toLowerCase();
     console.log(userVInput);
-    const url2 = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/visitorcenters/?limit=700%`;
+    const url2 = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/visitorcenters/?limit=700`;
     let VLink = document.getElementById("VisitorLink")
 
 
@@ -123,7 +119,7 @@ function SearchV() {
      .then((response) => {return response.json();})
      .then((response) => {
         console.log(response)
-        let VCenter = response.data.filter(VC => VC.url.toLowerCase().includes(userVInput.toLowerCase().replace("", "")))[0];
+        let VCenter = response.data.filter(VC => VC.name.toLowerCase().includes(userVInput.toLowerCase()))[0];
         console.log(VCenter)
 
         VLink.href = VCenter.url;
